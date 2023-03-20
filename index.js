@@ -1,5 +1,3 @@
-const connection = require("./connection");
-
 const { prompt } = require("inquirer");
 const logo = require("asciiart-logo");
 const db = require("./db");
@@ -9,9 +7,7 @@ init();
 
 function init() {
   const logoText = logo({ name: "Employee Manager" }).render();
-
   console.log(logoText);
-
   prompts();
 }
 
@@ -91,6 +87,70 @@ function prompts() {
             //case "value"
             //function();
             //break;
+            case "VIEW_EMPLOYEES":
+              viewEmployees();
+              break;
+            case "VIEW_EMPLOYEES_BY_DEPARTMENT":
+              viewEmployeesByDepartment();
+              break;
+            case "VIEW_EMPLOYEES_BY_MANAGER":
+              viewEmployeesByManager();
+              break;
+            case "ADD_EMPLOYEE":
+              addEmployee();
+              break;
+            case "REMOVE_EMPLOYEE":
+              removeEmployee();
+              break;
+            case "UPDATE_EMPLOYEE_ROLE":
+              updateEmployeeRole();
+              break;
+            case "UPDATE_EMPLOYEE_MANAGER":
+              updateEmployeeManager();
+              break;
+            case "VIEW_DEPARTMENTS":
+              viewDepartments();
+              break;
+            case "ADD_DEPARTMENT":
+              addDepartment();
+              break;
+            case "REMOVE_DEPARTMENT":
+              removeDepartment();
+              break;
+            case "VIEW_UTILIZED_BUDGET_BY_DEPARTMENT":
+              viewUtilizedBudgetByDepartment();
+              break;
+            case "VIEW_ROLES":
+              viewRoles();
+              break;
+            case "ADD_ROLE":
+              addRole();
+              break;
+            case "REMOVE_ROLE":
+              removeRole();
+              break;
+            default:
+              quit();
         }
     })
+}
+
+function viewEmployees(){}
+function viewEmployeesByDepartment();
+function viewEmployeesByManager();
+function addEmployee();
+function removeEmployee();
+function updateEmployeeRole();
+function updateEmployeeManager();
+function viewDepartments();
+function addDepartment();
+function removeDepartment();
+function viewUtilizedBudgetByDepartment();
+function viewRoles(){}
+function addRole(){}
+function removeRole(){}
+
+function quit(){
+  console.log("closing application")
+  process.exit();
 }

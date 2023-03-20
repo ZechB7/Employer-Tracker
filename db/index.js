@@ -11,21 +11,21 @@ class DB {
 //);}
 
 //view all employees
-viewAllEmployees(){
+findAllEmployees(){
     return this.connection.promise().query(
-        "SELECT employee.id employee.first_name, employee.last_name, role.title, departmnet.name AS departmnet, role.salary, CONCAT(manager.first_name, ' ', manager.last_name, AS manger FROM employee LEFT JOIN role on employee.role.id LEFT JOIN departmnet on role.department_id = departmnet.id LEFT JOIN employee manager on manager.id = employee.manager_id;"
+        "SELECT employee.id employee.first_name, employee.last_name, role.title, department.name AS department, role.salary, CONCAT(manager.first_name, ' ', manager.last_name, AS manger FROM employee LEFT JOIN role on employee.role.id LEFT JOIN department on role.department_id = department.id LEFT JOIN employee manager on manager.id = employee.manager_id;"
     );
 }
 
 //view all employees by department
-viewAllEmployeesByDepartment(departmentId){
+findAllEmployeesByDepartment(departmentId){
     return this.connection.promise().query(
-        "SELECT employee.id, employee.first_name, employee.last_name, role.title FROM employee LEFT JOIN role on employee.role_id = role.id LEFT JOIN department department on role.departmnet_id - deparment.id WHERE department.id = ?;",
+        "SELECT employee.id, employee.first_name, employee.last_name, role.title FROM employee LEFT JOIN role on employee.role_id = role.id LEFT JOIN department department on role.department_id - deparment.id WHERE department.id = ?;",
     departmentId
     );
 }
 //view all employees by manager
-viewAllEmployeesByManager(managerId){
+findAllEmployeesByManager(managerId){
     return this.connection.promise().query(
         "SELECT employee.id, employee.first_name, employee.last_name, department.name AS department, role.title FROM employee LEFT JOIN role on role.id = employee.rol_id LEFT JOIN department ON department.id = role.department_id WHERE manager_id = ?;",
         managerId
@@ -53,7 +53,7 @@ UpdateEmployeeRole(employeeId, roleId){
     );
 }
 //view all roles
-viewAllRoles(){
+findAllRoles(){
     return this.connection.promise().query(
         "SELECT role.id, role.title, department.name AS department, role.salary FROM role LEFT JOIN department on role.department_id = department.id;"
     );
@@ -73,7 +73,7 @@ removeRole(roleId){
     );
 }
 //view all departments
-viewAllDepartments(){
+findAllDepartments(){
     return this.connection.promise().query(
         "SELECT department.id, department.name FROM department;"
     );
@@ -93,7 +93,7 @@ removeDepartment(departmentId){
     );
 }
 // view total utilized budget by department
-viewDepartmentsCost(){
+findDepartmentsCost(){
     return this.connection.promise().query(
         "SELECT department.id, department.name, SUM(role.salary) AS utilized_budget FROM employee LEFT JOIN role on employee.role_id = role.id LEFT JOIN department on role.department = department.id GROUP BY department.id, department.name;"
     )
