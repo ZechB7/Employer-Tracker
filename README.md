@@ -6,6 +6,7 @@ This is a practice mock up of a simple employee database.
 ## Table of Contents
 * [Installation](#installation)
 * [Usage](#usage) 
+* [Contributors](#contributors)
 * [License](#license)
 * [Tests](#tests)
 * [Questions](#questions)
@@ -18,9 +19,13 @@ On the schema.sql open another terminal and enter mysql -u root -p and enter you
 To start the application in the main terminal where you npm i'd run 'npm start'
 
 ## Usage 
-A user can add departments, roles, employees and change the association between them in order to keep track of who works were and what ther title is.
-
+A user can add departments, roles, employees and change the association between them in order to keep track of who works were and what ther title is.\
 [Watch video of application](https://drive.google.com/file/d/1gel9qvqQYhHamsU3icFf6IJSAAu82oAN/view)
+
+## Contributors
+* [Magdalene Zernick](https://github.com/MZernick)
+* [Karen Peazzoni](https://github.com/kpeazzoni)
+* [Michael Smith](https://github.com/AustinBQ02)
 
 ## License
 This project is licensed under the MIT license.
