@@ -25,7 +25,6 @@ A user can add departments, roles, employees and change the association between 
 ## Credits
 * [Magdalene Zernick](https://github.com/MZernick)
 * [Karen Peazzoni](https://github.com/kpeazzoni)
-* [Michael Smith](https://github.com/AustinBQ02)
 
 ## License
 This project is licensed under the MIT license.
