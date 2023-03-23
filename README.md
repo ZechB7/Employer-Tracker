@@ -6,7 +6,7 @@ This is a practice mock up of a simple employee database.
 ## Table of Contents
 * [Installation](#installation)
 * [Usage](#usage) 
-* [Contributors](#contributors)
+* [Credits](#credits)
 * [License](#license)
 * [Tests](#tests)
 * [Questions](#questions)
@@ -22,7 +22,7 @@ To start the application in the main terminal where you npm i'd run 'npm start'
 A user can add departments, roles, employees and change the association between them in order to keep track of who works were and what ther title is.\
 [Watch video of application](https://drive.google.com/file/d/1gel9qvqQYhHamsU3icFf6IJSAAu82oAN/view)
 
-## Contributors
+## Credits
 * [Magdalene Zernick](https://github.com/MZernick)
 * [Karen Peazzoni](https://github.com/kpeazzoni)
 * [Michael Smith](https://github.com/AustinBQ02)
